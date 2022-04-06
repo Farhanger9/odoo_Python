@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+
+        <!-- Sale prospect Partner Search View -->
+        <record id="view_sale_prospect_partner_search" model="ir.ui.view">
+            <field name="name">sale.prospect.partner.search</field>
+            <field name="model">sale.prospect.partner</field>
+            <field name="arch" type="xml">
+                <search string="Sale Prospect Partner">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="country_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Sale prospect Partner Tree View -->
+        <record id="view_sale_prospect_partner_tree" model="ir.ui.view">
+            <field name="name">sale.prospect.partner.tree</field>
+            <field name="model">sale.prospect.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Prospect Partner">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Sale prospect Partner Form View -->
+        <record id="view_sale_prospect_partner_form" model="ir.ui.view">
+            <field name="name">sale.prospect.partner.form</field>
+            <field name="model">sale.prospect.partner</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="gender"/>
+                            </group>
+                            <group>
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_sale_prospect_partner">
+            <field name="name">Sale Prospect</field>
+            <field name="res_model">sale.prospect.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record> 
+
+        <menuitem name="Sale Prospect"
+                  id="menu_main_sale_prospect"
+                  sequence="5"
+                  web_icon="sp_prospct_partner,static/img/prospect.png"/>
+
+        <menuitem name="Sale Prospect"
+                  id="menu_sale_prospect"
+                  parent="menu_main_sale_prospect"
+                  action="action_sale_prospect_partner" 
+                  sequence="1" />
+        
+    </data>
+</odoo>
