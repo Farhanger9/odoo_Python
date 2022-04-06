@@ -1,0 +1,11 @@
+I made module which technical name is
+sale_prospect_partner
+inside this moule created one menu which name is
+Sale Prospect
+and once you click that menu you can see form view
+and list view and search view with three diffrent toes
+of fields.
+The source code of this module is attached here in
+zip format.
+
+For the API you need put the server details and then run on terminal
